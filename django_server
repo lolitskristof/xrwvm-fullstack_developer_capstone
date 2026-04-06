@@ -1,0 +1,92 @@
+pip install virtualenv
+Requirement already satisfied: virtualenv in /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages (21.2.0)
+Requirement already satisfied: distlib<1,>=0.3.7 in /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages (from virtualenv) (0.4.0)
+Requirement already satisfied: filelock<4,>=3.24.2 in /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages (from virtualenv) (3.25.2)
+Requirement already satisfied: platformdirs<5,>=3.9.1 in /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages (from virtualenv) (4.9.4)
+Requirement already satisfied: python-discovery>=1 in /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages (from virtualenv) (1.2.1)
+WARNING: There was an error checking the latest version of pip.
+
+virtualenv djangoenv
+created virtual environment CPython3.13.3.final.0-64-arm64 in 213ms
+  creator CPython3Posix(dest=/Users/kristoftovishati/Downloads/xrwvm-fullstack_developer_capstone/djangoenv, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/Users/kristoftovishati/Library/Caches/virtualenv)
+  added seed packages: pip==26.0.1
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+source djangoenv/bin/activate && python3 -m pip install -U -r server/requirements.txt
+Collecting requests (from -r server/requirements.txt (line 1))
+  Using cached requests-2.33.1-py3-none-any.whl.metadata (4.8 kB)
+Collecting Django (from -r server/requirements.txt (line 2))
+  Downloading django-6.0.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting Pillow (from -r server/requirements.txt (line 3))
+  Downloading pillow-12.2.0-cp313-cp313-macosx_11_0_arm64.whl.metadata (8.8 kB)
+Collecting gunicorn (from -r server/requirements.txt (line 4))
+  Downloading gunicorn-25.3.0-py3-none-any.whl.metadata (5.5 kB)
+Collecting python-dotenv (from -r server/requirements.txt (line 5))
+  Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+Collecting charset_normalizer<4,>=2 (from requests->-r server/requirements.txt (line 1))
+  Downloading charset_normalizer-3.4.7-cp313-cp313-macosx_10_13_universal2.whl.metadata (40 kB)
+Collecting idna<4,>=2.5 (from requests->-r server/requirements.txt (line 1))
+  Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting urllib3<3,>=1.26 (from requests->-r server/requirements.txt (line 1))
+  Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2023.5.7 (from requests->-r server/requirements.txt (line 1))
+  Using cached certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+Collecting asgiref>=3.9.1 (from Django->-r server/requirements.txt (line 2))
+  Using cached asgiref-3.11.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.5.0 (from Django->-r server/requirements.txt (line 2))
+  Using cached sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting packaging (from gunicorn->-r server/requirements.txt (line 4))
+  Using cached packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+Using cached requests-2.33.1-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.7-cp313-cp313-macosx_10_13_universal2.whl (309 kB)
+Using cached idna-3.11-py3-none-any.whl (71 kB)
+Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+Downloading django-6.0.3-py3-none-any.whl (8.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.4/8.4 MB 45.8 MB/s  0:00:00
+Downloading pillow-12.2.0-cp313-cp313-macosx_11_0_arm64.whl (4.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 60.7 MB/s  0:00:00
+Downloading gunicorn-25.3.0-py3-none-any.whl (208 kB)
+Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+Using cached asgiref-3.11.1-py3-none-any.whl (24 kB)
+Using cached certifi-2026.2.25-py3-none-any.whl (153 kB)
+Using cached sqlparse-0.5.5-py3-none-any.whl (46 kB)
+Using cached packaging-26.0-py3-none-any.whl (74 kB)
+Installing collected packages: urllib3, sqlparse, python-dotenv, Pillow, packaging, idna, charset_normalizer, certifi, asgiref, requests, gunicorn, Django
+Successfully installed Django-6.0.3 Pillow-12.2.0 asgiref-3.11.1 certifi-2026.2.25 charset_normalizer-3.4.7 gunicorn-25.3.0 idna-3.11 packaging-26.0 python-dotenv-1.2.2 requests-2.33.1 sqlparse-0.5.5 urllib3-2.6.3
+
+python3 manage.py makemigrations
+No changes detected
+
+python3 manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+
+python3 manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 06, 2026 - 10:45:34
+Django version 6.0.3, using settings 'djangoproj.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.

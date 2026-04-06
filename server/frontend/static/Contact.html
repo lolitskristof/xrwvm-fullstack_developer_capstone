@@ -1,0 +1,151 @@
+<html>
+<head>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    .contact-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    .contact-header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 10px;
+    }
+    .contact-header h1 {
+      margin-bottom: 15px;
+      font-size: 2.5em;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .info-card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      flex: 1;
+      min-width: 280px;
+      transition: transform 0.3s ease;
+    }
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .info-card h3 {
+      color: #667eea;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+    .info-card p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    .info-card strong {
+      color: #333;
+    }
+    .map-section {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .hours-table {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .hours-table td {
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+    .hours-table td:first-child {
+      font-weight: bold;
+      color: #667eea;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+    <div class="container-fluid">
+      <h2 style="padding-right: 5%;">Dealerships</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="contact-container">
+    <div class="contact-header">
+      <h1>Contact Us</h1>
+      <p>We're here to help! Reach out to us through any of the following channels.</p>
+    </div>
+
+    <div class="contact-info">
+      <div class="info-card">
+        <h3>📍 Visit Us</h3>
+        <p><strong>Best Cars Dealership</strong></p>
+        <p>1234 Automotive Boulevard</p>
+        <p>Detroit, MI 48201</p>
+        <p>United States</p>
+        <table class="hours-table">
+          <tr><td>Monday - Friday:</td><td>9:00 AM - 8:00 PM</td></tr>
+          <tr><td>Saturday:</td><td>9:00 AM - 6:00 PM</td></tr>
+          <tr><td>Sunday:</td><td>10:00 AM - 5:00 PM</td></tr>
+        </table>
+      </div>
+
+      <div class="info-card">
+        <h3>📞 Call Us</h3>
+        <p><strong>Sales Department:</strong></p>
+        <p>(555) 123-4567</p>
+        <p><strong>Service Department:</strong></p>
+        <p>(555) 123-4568</p>
+        <p><strong>Parts Department:</strong></p>
+        <p>(555) 123-4569</p>
+        <p><strong>General Inquiries:</strong></p>
+        <p>(555) 123-4500</p>
+      </div>
+
+      <div class="info-card">
+        <h3>✉️ Email Us</h3>
+        <p><strong>General:</strong></p>
+        <p>info@bestcars.com</p>
+        <p><strong>Sales:</strong></p>
+        <p>sales@bestcars.com</p>
+        <p><strong>Service:</strong></p>
+        <p>service@bestcars.com</p>
+        <p><strong>Support:</strong></p>
+        <p>support@bestcars.com</p>
+      </div>
+    </div>
+
+    <div class="info-card" style="margin-top: 30px;">
+      <h3>💬 Send Us a Message</h3>
+      <p>Have a question or need assistance? Fill out our online form and we'll get back to you within 24 hours.</p>
+      <p><strong>Follow us on social media:</strong></p>
+      <p>Facebook | Twitter | Instagram | LinkedIn</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
